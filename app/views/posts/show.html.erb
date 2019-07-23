@@ -28,7 +28,8 @@
 
 <p>
   <strong>Other image:</strong>
-  <%= @post.other_image %>
+  <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
+  <%#= @post.other_image %>
 </p>
 
 <p>
