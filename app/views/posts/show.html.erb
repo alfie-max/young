@@ -2,7 +2,7 @@
 <%= render "shared/navbar" %>
 
 <div class="card mb-3">
-  <%= image_tag(@post.image.url, class: "card-img-top", alt: 'Image', style: "width:40%; align-self: center;") if @post.image? %>
+  <%= image_tag(@post.image.url, class: "card-img-top", alt: 'Image', style: 'width:40%; align-self: center;') if @post.image? %>
   <!--<img src="..." class="card-img-top" alt="...">-->
   <div class="card-body">
     <h5 class="card-title"><%= @post.title %></h5>
