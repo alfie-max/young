@@ -9,6 +9,10 @@
         <li class="nav-item active">
           <%= link_to category.name, category_path(category.id), class: "nav-link" %>
         </li>
+        
+        <li class="nav-item active">
+          <%= link_to 'Gallery', gallery_path, class: "nav-link" %>
+        </li>
       <% end %>
     </ul>
     <span class="navbar-text">
