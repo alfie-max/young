@@ -16,6 +16,10 @@ class PostsController < ApplicationController
   def gallery
       @posts = Post.all.order("created_at DESC")
   end
+  
+  def main
+    
+  end
 
   # GET /posts/new
   def new
