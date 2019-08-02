@@ -33,7 +33,7 @@
                   </div> <!-- / .row -->
                   <!-- Text -->
                   <p class="mb-0 text-sm text-muted">
-                    <%= post.body %>
+                    <%= post.body.truncate(200) %>
                   </p>
                 </div>
                 <% end %>
