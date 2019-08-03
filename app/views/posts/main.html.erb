@@ -2,6 +2,25 @@
 
 
 
+
+
+<!-- NAV
+    ================================================== -->
+    <div class="mt-navbar border-bottom">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-auto">
+            <nav class="nav nav-overflow py-2">
+              <!--<p class= "nav-link font-weight-normal text-xs">Your one stop online place</p><br>-->
+              <% @catSections.each do |category| %>
+                <%= link_to category.name, category_path(category.id), class: "nav-link font-weight-normal text-xs" %>
+              <% end %>
+            </nav>
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </div>
+
 <!-- ITEMS
 ================================================== -->
 <section class="section">
