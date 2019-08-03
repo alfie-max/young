@@ -1,55 +1,92 @@
 <p id="notice"><%= notice %></p>
+
+
 <%= render "shared/navbar" %>
-<p>
-  <strong>Name:</strong>
+
+
+<%= render "shared/nav" %>
+
+
+<!-- BREADCRUMBS
+    ================================================== -->
+    <!--<nav class="breadcrumb">-->
+    <!--  <div class="container">-->
+    <!--    <div class="row align-items-center">-->
+    <!--      <div class="col">-->
+            
+            <!-- Heading -->
+    <!--        <h5 class="breadcrumb-heading">-->
+    <!--          Blog post-->
+    <!--        </h5>-->
+
+    <!--      </div>-->
+    <!--      <div class="col-auto">-->
+
+            <!-- Breadcrumb -->
+    <!--        <span class="breadcrumb-item">-->
+    <!--          <a href="index.html">Home</a>-->
+    <!--        </span>-->
+    <!--        <span class="breadcrumb-item active">-->
+    <!--          Blog post-->
+    <!--        </span>-->
+          
+    <!--      </div>-->
+    <!--    </div> <!-- / .row -->
+    <!--  </div> <!-- / .container -->
+    <!--</nav>-->
+
+
+<h1 style= "text-align: center">
   <%= @category.name %>
-</p>
+</h1>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @category.desc %>
-</p>
+<!--<p>-->
+<!--  <strong>Desc:</strong>-->
+<!--  <%#= @category.desc %>-->
+<!--</p>-->
 
-<div class="card-group" style="display: block;">
-  <% Post.where(category_id: @category.id).each do |post| %>
-    <div class="card">
-      <%= link_to image_tag(post.image.url, alt: 'Image', style: 'width: 40%'), post if post.image? %>
-      <!--<img src="..." class="card-img-top" alt="...">-->
-      <div class="card-body">
-        <h5 class="card-title"><%= link_to post.title, post %><%#= post.title %></h5>
-        <p class="card-text"><%= post.body %></p>
-        <p class="card-text"><small class="text-muted">By <%= post.user.name %></small></p>
+
+<!-- ITEMS
+================================================== -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <% Post.where(category_id: @category.id).each do |post| %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <!-- Item -->
+        <div class="position-relative">
+          <!-- Card -->
+            <%= link_to post do %>
+            <!-- Image -->
+            <%= image_tag(post.image.url, alt: 'Image', class: "card-img") if post.image? %>
+            <!--<img src="assets/img/86.jpg" alt="..." class="card-img">-->
+            <!-- Body -->
+            <div class="card-body">
+              <div class="row align-items-center mb-3">
+                <div class="col">
+                  <!-- Heading -->
+                  <h4 class="card-title mb-0">
+                    <%= post.title %>
+                  </h4>
+                </div>
+                <!--<div class="col-auto">-->
+                <!--  <p class="mb-0 text-sm text-muted">-->
+                <!--    $70-->
+                <!--  </p>-->
+                <!--</div>-->
+              </div> <!-- / .row -->
+              <!-- Text -->
+              <p class="mb-0 text-sm text-muted">
+                <%= post.body.truncate(100) %>
+              </p>
+            </div>
+            <% end %>
+        </div>
       </div>
-    </div>
-  <% end %>
-</div>
-
-<!--<div class="table-responsive">-->
-<!--  <table class="table table-bordered">-->
-<!--    <thead>-->
-<!--      <tr>-->
-<!--        <th>-->
-<!--          Title-->
-<!--        </th>-->
-<!--        <th>-->
-<!--          Customer name-->
-<!--        </th>-->
-<!--      </tr>-->
-<!--    </thead>-->
-<!--    <tbody>-->
-<!--      <%# Post.where(category_id: @category.id).each do |post| %>-->
-<!--        <tr>-->
-<!--          <td>-->
-<!--              <%#= post.title %>-->
-<!--          </td>-->
-<!--          <td> -->
-<!--              <%#= post.body %>-->
-<!--          </td>-->
-<!--        </tr>-->
-<!--      <%# end %>-->
-<!--    </tbody>-->
-<!--  </table>-->
-<!--</div>-->
+      <% end %>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</section>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%#= link_to 'Back', categories_path %>
