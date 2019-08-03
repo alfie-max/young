@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     
-    before_action :getCatSection, :getPostSection
+    before_action :getCatSection, :getPostSection, :getAdvertSection
     
     protect_from_forgery with: :exception
 
@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
     
     def getPostSection
         @postSections = Post.all.order("created_at DESC")
+    end
+    
+    def getAdvertSection
+        @advertSections = Advert.all.order("created_at DESC")
     end
 
     protected
