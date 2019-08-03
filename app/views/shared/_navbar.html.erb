@@ -57,142 +57,50 @@
       <!-- Links -->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Welcome
+          <a class="nav-link" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Home
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarWelcome">
-            <a class="dropdown-item  active " href="index.html">
-              Header: Image
-            </a>
-            <a class="dropdown-item " href="index-header-carousel.html">
-              Header: Carousel
-            </a>
-            <a class="dropdown-item " href="index-header-parallax.html">
-              Header: Parallax
-            </a>
-            <a class="dropdown-item " href="index-header-video.html">
-              Header: Video
-            </a>
-          </div>
+          <!--<div class="dropdown-menu" aria-labelledby="navbarWelcome">-->
+          <!--  <a class="dropdown-item  active " href="#">-->
+          <!--    Header: Image-->
+          <!--  </a>-->
+          <!--  <a class="dropdown-item " href="#">-->
+          <!--    Header: Carousel-->
+          <!--  </a>-->
+          <!--  <a class="dropdown-item " href="#">-->
+          <!--    Header: Parallax-->
+          <!--  </a>-->
+          <!--  <a class="dropdown-item " href="#">-->
+          <!--    Header: Video-->
+          <!--  </a>-->
+          <!--</div>-->
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarLandings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Landings
+            Categories
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarLandings">
-            <a class="dropdown-item " href="app.html">
-              App
-            </a>
-            <a class="dropdown-item " href="company.html">
-              Company
-            </a>
-            <a class="dropdown-item " href="fullpage.html">
-              Fullpage
-            </a>
-            <a class="dropdown-item " href="product.html">
-              Product
-            </a>
-            <a class="dropdown-item " href="real-estate.html">
-              Real estate
-            </a>
-            <a class="dropdown-item " href="restaurant.html">
-              Restaurant
-            </a>
-            <a class="dropdown-item " href="service.html">
-              Service
-            </a>
+            <% @catSections.each do |category| %>
+              <%= link_to category.name, category_path(category.id), class: "dropdown-item" %>
+              <!--<a class="dropdown-item " href="#">-->
+              <!--  App-->
+              <!--</a>-->
+            <% end %>
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Pages
+          <a class="nav-link" href="#" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            TV
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarPages">
-            <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#" id="pagesBlog" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Blog
-              </a>
-              <div class="dropdown-menu" aria-labelledby="pagesBlog">
-                <a class="dropdown-item " href="blog.html">
-                  Blog
-                </a>
-                <a class="dropdown-item " href="blog-post.html">
-                  Blog: Post
-                </a>
-              </div>
-            </li>
-            <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#" id="pagesShop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Shop
-              </a>
-              <div class="dropdown-menu" aria-labelledby="pagesShop">
-                <a class="dropdown-item " href="shop.html">
-                  Shop
-                </a>
-                <a class="dropdown-item " href="shop-item.html">
-                  Shop: Item
-                </a>
-                <a class="dropdown-item " href="cart.html">
-                  Shop: Cart
-                </a>
-                <a class="dropdown-item " href="checkout.html">
-                  Shop: Checkout
-                </a>
-              </div>
-            </li>
-            <li>
-              <a class="dropdown-item " href="about.html">
-                About
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item " href="contact.html">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item " href="faq.html">
-                FAQ
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item " href="pricing.html">
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item " href="sign-in.html">
-                Sign In
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item " href="sign-up.html">
-                Sign Up
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item " href="404.html">
-                404
-              </a>
-            </li>
-          </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarComponents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Components
+          <a class="nav-link" href="#" id="navbarComponents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Awards
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarComponents">
-            <a class="dropdown-item " href="components-theme.html">
-              Theme
-            </a>
-            <a class="dropdown-item " href="components-bootstrap.html">
-              Bootstrap
-            </a>
-          </div>
         </li>
         <li class="nav-item ">
           <a href="documentation.html" class="nav-link">
-            Documentation
+            Music
           </a>
         </li>
         <li class="nav-item-divider">
@@ -202,7 +110,7 @@
         </li>
         <li class="nav-item">
           <a href="#" target="_blank" class="nav-link">
-            Purchase now
+            Others
           </a>
         </li>
       </ul>
