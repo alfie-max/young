@@ -69,34 +69,21 @@
           <!--  </a>-->
           <!--</div>-->
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarLandings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Categories
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarLandings">
-            <% @catSections.each do |category| %>
-              <%= link_to category.name, category_path(category.id), class: "dropdown-item" %>
-              <!--<a class="dropdown-item " href="#">-->
-              <!--  App-->
-              <!--</a>-->
-            <% end %>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="#" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            TV
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="#" id="navbarComponents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Awards
-          </a>
-        </li>
-        <li class="nav-item ">
-          <a href="documentation.html" class="nav-link">
-            Music
-          </a>
-        </li>
+        <!--<li class="nav-item dropdown">-->
+        <!--  <a class="nav-link dropdown-toggle" href="#" id="navbarLandings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+        <!--    contents-->
+        <!--  </a>-->
+        <!--  <div class="dropdown-menu" aria-labelledby="navbarLandings">-->
+        <!--    <%# @catSections.each do |category| %>-->
+        <!--      <%#= link_to category.name, category_path(category.id), class: "dropdown-item" %>-->
+        <!--    <%# end %>-->
+        <!--  </div>-->
+        <!--</li>-->
+        <% @catSections.each do |category| %>
+          <li class="nav-item dropdown">
+            <%= link_to category.name, category_path(category.id), class: "nav-link" %>
+          </li>
+        <% end %>
         <li class="nav-item-divider">
           <span class="nav-link">
             <span></span>
@@ -145,7 +132,7 @@
 <!--    </ul>-->
 <!--    <span class="navbar-text">-->
 <!--      <%# if user_signed_in? %>-->
-<!--        Logged in as <strong><%= current_user.email %></strong>-->
+<!--        Logged in as <strong><%#= current_user.email %></strong>-->
 <!--        <%#= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |-->
 <!--        <%#= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>-->
 <!--      <%# else %>-->
