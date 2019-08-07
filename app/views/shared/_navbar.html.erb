@@ -69,21 +69,21 @@
           <!--  </a>-->
           <!--</div>-->
         </li>
-        <!--<li class="nav-item dropdown">-->
-        <!--  <a class="nav-link dropdown-toggle" href="#" id="navbarLandings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-        <!--    contents-->
-        <!--  </a>-->
-        <!--  <div class="dropdown-menu" aria-labelledby="navbarLandings">-->
-        <!--    <%# @catSections.each do |category| %>-->
-        <!--      <%#= link_to category.name, category_path(category.id), class: "dropdown-item" %>-->
-        <!--    <%# end %>-->
-        <!--  </div>-->
-        <!--</li>-->
-        <% @catSections.each do |category| %>
-          <li class="nav-item dropdown">
-            <%= link_to category.name, category_path(category.id), class: "nav-link" %>
-          </li>
-        <% end %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarLandings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Features
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarLandings">
+            <% @catSections.each do |category| %>
+              <%= link_to category.name, category_path(category.id), class: "dropdown-item" %>
+            <% end %>
+          </div>
+        </li>
+        <%# @catSections.each do |category| %>
+          <!--<li class="nav-item dropdown">-->
+            <%#= link_to category.name, category_path(category.id), class: "nav-link" %>
+          <!--</li>-->
+        <%# end %>
         <li class="nav-item-divider">
           <span class="nav-link">
             <span></span>
