@@ -4,10 +4,12 @@ one:
   title: MyString
   image: MyString
   url: MyString
-  desc: MyText
+  status: 1
+  desc: MyString
 
 two:
   title: MyString
   image: MyString
   url: MyString
-  desc: MyText
+  status: 1
+  desc: MyString

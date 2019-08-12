@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_03_145214) do
+ActiveRecord::Schema.define(version: 2019_08_12_065647) do
 
   create_table "adverts", force: :cascade do |t|
     t.string "title"
     t.string "image"
     t.string "url"
-    t.text "desc"
+    t.integer "status"
+    t.string "desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

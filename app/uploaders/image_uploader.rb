@@ -12,6 +12,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   def store_dir
     'public/my/upload/directory'
   end
+  
+  def cache_dir
+    'public/my/upload/directory'
+  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)

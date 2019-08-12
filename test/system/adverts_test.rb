@@ -16,6 +16,7 @@ class AdvertsTest < ApplicationSystemTestCase
 
     fill_in "Desc", with: @advert.desc
     fill_in "Image", with: @advert.image
+    fill_in "Status", with: @advert.status
     fill_in "Title", with: @advert.title
     fill_in "Url", with: @advert.url
     click_on "Create Advert"
@@ -30,6 +31,7 @@ class AdvertsTest < ApplicationSystemTestCase
 
     fill_in "Desc", with: @advert.desc
     fill_in "Image", with: @advert.image
+    fill_in "Status", with: @advert.status
     fill_in "Title", with: @advert.title
     fill_in "Url", with: @advert.url
     click_on "Update Advert"

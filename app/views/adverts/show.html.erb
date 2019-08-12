@@ -7,13 +7,17 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag(@advert.image.url, class: "img-fluid mb-3", alt: 'Image', style: "align-self: center; width: 20%;") if @advert.image? %>
-  <%#= @advert.image %>
+  <%= @advert.image %>
 </p>
 
 <p>
   <strong>Url:</strong>
   <%= @advert.url %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @advert.status %>
 </p>
 
 <p>

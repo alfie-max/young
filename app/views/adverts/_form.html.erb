@@ -27,8 +27,13 @@
   </div>
 
   <div class="field">
+    <%= form.label :status %>
+    <%= form.select :status, Advert.statuses.map { |key, value| [key.humanize, key] } %>
+  </div>
+
+  <div class="field">
     <%= form.label :desc %>
-    <%= form.text_area :desc %>
+    <%= form.text_field :desc %>
   </div>
 
   <div class="actions">

@@ -4,7 +4,8 @@ class CreateAdverts < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :image
       t.string :url
-      t.text :desc
+      t.integer :status
+      t.string :desc
 
       t.timestamps
     end

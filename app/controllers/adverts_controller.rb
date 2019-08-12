@@ -1,6 +1,4 @@
 class AdvertsController < ApplicationController
-  #before_action :authenticate_user!
-  
   before_action :set_advert, only: [:show, :edit, :update, :destroy]
 
   # GET /adverts
@@ -71,6 +69,6 @@ class AdvertsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def advert_params
-      params.require(:advert).permit(:title, :image, :url, :desc)
+      params.require(:advert).permit(:title, :image, :url, :status, :desc)
     end
 end
