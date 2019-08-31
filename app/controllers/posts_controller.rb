@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show, :main]
+  before_action :authenticate_user!, except: [:index, :show, :main, :young]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
@@ -12,6 +12,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+  end
+  
+  def young
   end
   
   def gallery

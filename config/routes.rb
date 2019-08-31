@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get '/gallery', to: 'posts#gallery', as: :gallery
   get '/main', to: 'posts#main', as: :main
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'posts#main'
+  root 'posts#young'
 end
